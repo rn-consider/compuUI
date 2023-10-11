@@ -20,7 +20,9 @@
   /* left menu end */
 
   /* logo start */
-  --logo-height: 50px;
+  --logo-height: 85px;
+
+  --logo-width: 617px;
 
   --logo-title-text-color: #fff;
   /* logo end */
