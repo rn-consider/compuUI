@@ -1,11 +1,5 @@
 export default {
   common: {
-    ComputerSocietyHistory: 'Computer Society History',
-    ComputerSocietyHonor: 'Computer Society Honors',
-    ComputerSocietyRegulation: 'Constitution and Regulations of the Computer Society',
-    ComputerSocietyOrganization: 'Computer Society Organization',
-    ComputerSocietyIntroduction: 'Introduction to the Computer Society',
-    ComputerSocietyInfo: 'Computer Society Information',
     inputText: 'Please input',
     selectText: 'Please select',
     startTimeText: 'Start time',
@@ -122,6 +116,12 @@ export default {
     codePlaceholder: 'Please input verification code'
   },
   router: {
+    ComputerSocietyHistory: 'Computer Society History',
+    ComputerSocietyHonor: 'Computer Society Honors',
+    ComputerSocietyRegulation: 'Constitution and Regulations of the Computer Society',
+    ComputerSocietyOrganization: 'Computer Society Organization',
+    ComputerSocietyIntroduction: 'Introduction to the Computer Society',
+    ComputerSocietyInfo: 'Computer Society Information',
     login: 'Login',
     level: 'Multi level menudedwqd',
     menu: 'Menu',
