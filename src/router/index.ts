@@ -114,6 +114,52 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
         }
       }
     ]
+  },
+  {
+    path: '/info',
+    component: Layout,
+    meta: {
+      title: t('router.ComputerSocietyInfo'),
+      icon: 'ic:baseline-library-books'
+    },
+    name: 'Info',
+    children: [
+      {
+        path: 'https://element-plus-admin-doc.cn/',
+        name: 'ComputerSocietyIntroduction',
+        meta: {
+          title: t('router.ComputerSocietyIntroduction')
+        }
+      },
+      {
+        path: 'https://element-plus-admin-doc.cn/',
+        name: 'ComputerSocietyOrganization',
+        meta: {
+          title: t('router.ComputerSocietyOrganization')
+        }
+      },
+      {
+        path: 'https://element-plus-admin-doc.cn/',
+        name: 'ComputerSocietyRegulation',
+        meta: {
+          title: t('router.ComputerSocietyRegulation')
+        }
+      },
+      {
+        path: 'https://element-plus-admin-doc.cn/',
+        name: 'ComputerSocietyHonor',
+        meta: {
+          title: t('router.ComputerSocietyHonor')
+        }
+      },
+      {
+        path: 'https://element-plus-admin-doc.cn/',
+        name: 'ComputerSocietyHistory',
+        meta: {
+          title: t('router.ComputerSocietyHistory')
+        }
+      }
+    ]
   }
 ]
 

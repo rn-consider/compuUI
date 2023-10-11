@@ -116,6 +116,12 @@ export default {
     codePlaceholder: '请输入验证码'
   },
   router: {
+    ComputerSocietyHistory: '学会简史',
+    ComputerSocietyHonor: '学会荣誉',
+    ComputerSocietyRegulation: '章程制度',
+    ComputerSocietyOrganization: '组织机构',
+    ComputerSocietyIntroduction: '学会简介',
+    ComputerSocietyInfo: '学会信息',
     login: '登录',
     level: '多级菜单',
     menu: '菜单',

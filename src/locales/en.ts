@@ -1,5 +1,11 @@
 export default {
   common: {
+    ComputerSocietyHistory: 'Computer Society History',
+    ComputerSocietyHonor: 'Computer Society Honors',
+    ComputerSocietyRegulation: 'Constitution and Regulations of the Computer Society',
+    ComputerSocietyOrganization: 'Computer Society Organization',
+    ComputerSocietyIntroduction: 'Introduction to the Computer Society',
+    ComputerSocietyInfo: 'Computer Society Information',
     inputText: 'Please input',
     selectText: 'Please select',
     startTimeText: 'Start time',
@@ -117,7 +123,7 @@ export default {
   },
   router: {
     login: 'Login',
-    level: 'Multi level menu',
+    level: 'Multi level menudedwqd',
     menu: 'Menu',
     menu1: 'Menu1',
     menu11: 'Menu1-1',
