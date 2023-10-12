@@ -8,6 +8,7 @@ const { t } = useI18n()
 
 export const constantRouterMap: AppRouteRecordRaw[] = [
   {
+    // 根目录直接导向到/level
     path: '/',
     component: Layout,
     redirect: '/level',
@@ -52,11 +53,22 @@ export const constantRouterMap: AppRouteRecordRaw[] = [
       title: '404',
       noTagsView: true
     }
+  },
+  {
+    path: '/my',
+    name: 'My',
+    meta: {
+      hidden: true,
+      title: 'my',
+      noTagsView: true
+    },
+    component: () => import('@/views/infos/Intro.vue')
   }
 ]
 
 export const asyncRouterMap: AppRouteRecordRaw[] = [
   {
+    // 这里把/level重定向到/menu1/menu1-1/menu1-1-1
     path: '/level',
     component: Layout,
     redirect: '/level/menu1/menu1-1/menu1-1-1',
@@ -67,6 +79,7 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
     },
     children: [
       {
+        // 这里Path为:/level/menu1
         path: 'menu1',
         name: 'Menu1',
         component: getParentLayout(),
@@ -76,6 +89,7 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
         },
         children: [
           {
+            // 这里路径:/level/menu1/menu1-1
             path: 'menu1-1',
             name: 'Menu11',
             component: getParentLayout(),
@@ -86,6 +100,7 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
             },
             children: [
               {
+                // 这里路径:/level/menu1/menu1-1/menu1-1-1 导向为@/views/Level/Menu111.vue
                 path: 'menu1-1-1',
                 name: 'Menu111',
                 component: () => import('@/views/Level/Menu111.vue'),
@@ -112,49 +127,65 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
         meta: {
           title: t('router.menu2')
         }
+      },
+      {
+        path: 'menu3',
+        name: 'Menu3',
+        component: () => import('@/views/infos/Intro.vue'),
+        meta: {
+          title: t('router.menu3')
+        }
       }
     ]
   },
   {
+    // 这里重定向到/home
     path: '/info',
     component: Layout,
+    name: 'Info',
+    redirect: '/info/home.vue',
     meta: {
       title: t('router.ComputerSocietyInfo'),
       icon: 'ic:baseline-library-books'
     },
-    name: 'Info',
+    // 这里的路径为/info/
     children: [
       {
-        path: 'https://element-plus-admin-doc.cn/',
+        path: 'intro',
         name: 'ComputerSocietyIntroduction',
+        component: () => import('@/views/Info/Intro.vue'),
         meta: {
           title: t('router.ComputerSocietyIntroduction')
         }
       },
       {
-        path: 'https://element-plus-admin-doc.cn/',
+        path: 'organization',
         name: 'ComputerSocietyOrganization',
+        component: () => import('@/views/Info/Organization.vue'),
         meta: {
           title: t('router.ComputerSocietyOrganization')
         }
       },
       {
-        path: 'https://element-plus-admin-doc.cn/',
+        path: 'regulation',
         name: 'ComputerSocietyRegulation',
+        component: () => import('@/views/Info/Regulation.vue'),
         meta: {
           title: t('router.ComputerSocietyRegulation')
         }
       },
       {
-        path: 'https://element-plus-admin-doc.cn/',
+        path: 'honor',
         name: 'ComputerSocietyHonor',
+        component: () => import('@/views/Info/Honor.vue'),
         meta: {
           title: t('router.ComputerSocietyHonor')
         }
       },
       {
-        path: 'https://element-plus-admin-doc.cn/',
+        path: 'history',
         name: 'ComputerSocietyHistory',
+        component: () => import('@/views/Info/Histroy.vue'),
         meta: {
           title: t('router.ComputerSocietyHistory')
         }
