@@ -13,6 +13,7 @@ const adminList = [
     name: 'Admin',
     redirect: '/admin/introupdate',
     meta: {
+
       title: 'router.ComputerSocietyInfoUpdate',
       icon: 'ic:baseline-library-books'
     },

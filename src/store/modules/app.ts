@@ -49,8 +49,6 @@ export const useAppStore = defineStore('app', {
       breadcrumbIcon: true,
       // 折叠图标
       hamburger: true,
-
-      dynamicRouter: true,
       // 全屏图标
       screenfull: true,
       // 尺寸图标
@@ -59,6 +57,8 @@ export const useAppStore = defineStore('app', {
       locale: true,
       // 标签页
       tagsView: true,
+      // 东台路由开
+      dynamicRouter: true,
       // logo
       logo: true,
       // 菜单手风琴
@@ -70,7 +70,7 @@ export const useAppStore = defineStore('app', {
       // 灰色模式
       greyMode: false,
       // layout布局
-      layout: 'top',
+      layout: 'cutMenu',
       // 暗黑模式
       isDark: false,
       // 组件尺寸
