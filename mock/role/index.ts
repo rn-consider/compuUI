@@ -7,6 +7,59 @@ const timeout = 1000
 
 const adminList = [
   {
+    // 这里是admin路由
+    path: '/admin',
+    component: '#',
+    name: 'Admin',
+    redirect: '/admin/introupdate',
+    meta: {
+      title: 'router.ComputerSocietyInfoUpdate',
+      icon: 'ic:baseline-library-books'
+    },
+    children: [
+      {
+        path: 'introupdate',
+        name: 'ComputerSocietyIntroductionUpdate',
+        component: 'views/Admin/IntroUpdate',
+        meta: {
+          title: 'router.ComputerSocietyIntroductionUpdate'
+        }
+      },
+      {
+        path: 'organizationupdate',
+        name: 'ComputerSocietyOrganizationUpdate',
+        component: 'views/Admin/OrganizationUpdate',
+        meta: {
+          title: 'router.ComputerSocietyOrganizationUpdate'
+        }
+      },
+      {
+        path: 'regulationupdate',
+        name: 'ComputerSocietyRegulationUpdate',
+        component: 'views/Admin/RegulationUpdate',
+        meta: {
+          title: 'router.ComputerSocietyRegulationUpdate'
+        }
+      },
+      {
+        path: 'honorupdate',
+        name: 'ComputerSocietyHonorUpdate',
+        component: 'views/Admin/HonorUpdate',
+        meta: {
+          title: 'router.ComputerSocietyHonorUpdate'
+        }
+      },
+      {
+        path: 'historyupdate',
+        name: 'ComputerSocietyHistoryUpdate',
+        component: 'views/Admin/HistroyUpdate',
+        meta: {
+          title: 'router.ComputerSocietyHistoryUpdate'
+        }
+      }
+    ]
+  },
+  {
     path: '/level',
     component: '#',
     redirect: '/level/menu1/menu1-1/menu1-1-1',
@@ -61,111 +114,6 @@ const adminList = [
         component: 'views/Level/Menu2',
         meta: {
           title: 'router.menu2'
-        }
-      }
-    ]
-  },
-  {
-    path: '/example',
-    component: '#',
-    redirect: '/example/example-dialog',
-    name: 'Example',
-    meta: {
-      title: 'router.example',
-      icon: 'ep:management',
-      alwaysShow: true
-    },
-    children: [
-      {
-        path: 'example-dialog',
-        component: 'views/Example/Dialog/ExampleDialog',
-        name: 'ExampleDialog',
-        meta: {
-          title: 'router.exampleDialog'
-        }
-      },
-      {
-        path: 'example-page',
-        component: 'views/Example/Page/ExamplePage',
-        name: 'ExamplePage',
-        meta: {
-          title: 'router.examplePage'
-        }
-      },
-      {
-        path: 'example-add',
-        component: 'views/Example/Page/ExampleAdd',
-        name: 'ExampleAdd',
-        meta: {
-          title: 'router.exampleAdd',
-          noTagsView: true,
-          noCache: true,
-          hidden: true,
-          showMainRoute: true,
-          activeMenu: '/example/example-page'
-        }
-      },
-      {
-        path: 'example-edit',
-        component: 'views/Example/Page/ExampleEdit',
-        name: 'ExampleEdit',
-        meta: {
-          title: 'router.exampleEdit',
-          noTagsView: true,
-          noCache: true,
-          hidden: true,
-          showMainRoute: true,
-          activeMenu: '/example/example-page'
-        }
-      },
-      {
-        path: 'example-detail',
-        component: 'views/Example/Page/ExampleDetail',
-        name: 'ExampleDetail',
-        meta: {
-          title: 'router.exampleDetail',
-          noTagsView: true,
-          noCache: true,
-          hidden: true,
-          showMainRoute: true,
-          activeMenu: '/example/example-page'
-        }
-      }
-    ]
-  },
-  {
-    path: '/error',
-    component: '#',
-    redirect: '/error/404',
-    name: 'Error',
-    meta: {
-      title: 'router.errorPage',
-      icon: 'ci:error',
-      alwaysShow: true
-    },
-    children: [
-      {
-        path: '404-demo',
-        component: 'views/Error/404',
-        name: '404Demo',
-        meta: {
-          title: '404'
-        }
-      },
-      {
-        path: '403-demo',
-        component: 'views/Error/403',
-        name: '403Demo',
-        meta: {
-          title: '403'
-        }
-      },
-      {
-        path: '500-demo',
-        component: 'views/Error/500',
-        name: '500Demo',
-        meta: {
-          title: '500'
         }
       }
     ]

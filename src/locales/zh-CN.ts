@@ -122,6 +122,13 @@ export default {
     ComputerSocietyOrganization: '组织机构',
     ComputerSocietyIntroduction: '学会简介',
     ComputerSocietyInfo: '学会信息',
+    ComputerSocietyHistoryUpdate: '学会简史更新',
+    ComputerSocietyHonorUpdate: '学会荣誉更新',
+    ComputerSocietyRegulationUpdate: '章程制度更新',
+    ComputerSocietyOrganizationUpdate: '组织机构更新',
+    ComputerSocietyIntroductionUpdate: '学会简介更新',
+    ComputerSocietyInfoUpdate: '学会信息更新',
+    // -----------------custom--------------------
     login: '登录',
     level: '多级菜单',
     menu: '菜单',

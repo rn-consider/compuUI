@@ -68,6 +68,59 @@ export const constantRouterMap: AppRouteRecordRaw[] = [
 
 export const asyncRouterMap: AppRouteRecordRaw[] = [
   {
+    // 这里是admin路由
+    path: '/admin',
+    component: Layout,
+    name: 'Admin',
+    redirect: '/admin/introupdate',
+    meta: {
+      title: t('router.ComputerSocietyInfoUpdate'),
+      icon: 'ic:baseline-library-books'
+    },
+    children: [
+      {
+        path: 'introupdate',
+        name: 'ComputerSocietyIntroductionUpdate',
+        component: () => import('@/views/Admin/IntroUpdate.vue'),
+        meta: {
+          title: t('router.ComputerSocietyIntroductionUpdate')
+        }
+      },
+      {
+        path: 'organizationupdate',
+        name: 'ComputerSocietyOrganizationUpdate',
+        component: () => import('@/views/Admin/OrganizationUpdate.vue'),
+        meta: {
+          title: t('router.ComputerSocietyOrganizationUpdate')
+        }
+      },
+      {
+        path: 'regulationupdate',
+        name: 'ComputerSocietyRegulationUpdate',
+        component: () => import('@/views/Admin/RegulationUpdate.vue'),
+        meta: {
+          title: t('router.ComputerSocietyRegulationUpdate')
+        }
+      },
+      {
+        path: 'honorupdate',
+        name: 'ComputerSocietyHonorUpdate',
+        component: () => import('@/views/Admin/HonorUpdate.vue'),
+        meta: {
+          title: t('router.ComputerSocietyHonorUpdate')
+        }
+      },
+      {
+        path: 'historyupdate',
+        name: 'ComputerSocietyHistoryUpdate',
+        component: () => import('@/views/Admin/HistroyUpdate.vue'),
+        meta: {
+          title: t('router.ComputerSocietyHistoryUpdate')
+        }
+      }
+    ]
+  },
+  {
     // 这里把/level重定向到/menu1/menu1-1/menu1-1-1
     path: '/level',
     component: Layout,

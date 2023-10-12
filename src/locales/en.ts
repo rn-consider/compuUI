@@ -122,6 +122,13 @@ export default {
     ComputerSocietyOrganization: 'Computer Society Organization',
     ComputerSocietyIntroduction: 'Introduction to the Computer Society',
     ComputerSocietyInfo: 'Computer Society Information',
+    ComputerSocietyHistoryUpdate: 'Computer Society History Update',
+    ComputerSocietyHonorUpdate: 'Computer Society Honors Update',
+    ComputerSocietyRegulationUpdate: 'Constitution and Regulations of the Computer Society Update',
+    ComputerSocietyOrganizationUpdate: 'Computer Society Organization Update',
+    ComputerSocietyIntroductionUpdate: 'Introduction to the Computer Society Update',
+    ComputerSocietyInfoUpdate: 'Computer Society Information Update',
+    // -----------------------custom----------------
     login: 'Login',
     level: 'Multi level menudedwqd',
     menu: 'Menu',
