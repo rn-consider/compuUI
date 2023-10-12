@@ -56,8 +56,8 @@ export const usePermissionStore = defineStore('permission', {
         } else if (type === 'test') {
           console.log('以test用户登陆')
           // 模拟前端过滤菜单
-          console.log('使用generateRoutesFn1方法生成路由表')
-          routerMap = generateRoutesFn1(cloneDeep(asyncRouterMap), routers as string[])
+          console.log('test使用generateRoutesFn2方法生成路由表')
+          routerMap = generateRoutesFn2(routers as AppCustomRouteRecordRaw[])
         } else {
           // 直接读取静态路由表
           console.log('直接读取静态路由表')
