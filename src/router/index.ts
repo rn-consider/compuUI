@@ -18,14 +18,58 @@ export const constantRouterMap: AppRouteRecordRaw[] = [
     }
   },
   {
-    path: '/mytest',
-    component: () => import('@/views/Public/home.vue'),
-    name: 'Mytest',
+    // 这里重定向到/home
+    path: '/info',
+    component: Layout,
+    name: 'Info',
+    redirect: '/info/intro',
     meta: {
-      hidden: true,
-      title: '测试权限',
-      noTagsView: true
-    }
+      title: t('router.ComputerSocietyInfo'),
+      icon: 'ic:baseline-library-books'
+    },
+    // 这里的路径为/info/
+    children: [
+      {
+        path: 'intro',
+        name: 'ComputerSocietyIntroduction',
+        component: () => import('@/views/Info/Intro.vue'),
+        meta: {
+          title: t('router.ComputerSocietyIntroduction')
+        }
+      },
+      {
+        path: 'organization',
+        name: 'ComputerSocietyOrganization',
+        component: () => import('@/views/Info/Organization.vue'),
+        meta: {
+          title: t('router.ComputerSocietyOrganization')
+        }
+      },
+      {
+        path: 'regulation',
+        name: 'ComputerSocietyRegulation',
+        component: () => import('@/views/Info/Regulation.vue'),
+        meta: {
+          title: t('router.ComputerSocietyRegulation')
+        }
+      },
+      {
+        path: 'honor',
+        name: 'ComputerSocietyHonor',
+        component: () => import('@/views/Info/Honor.vue'),
+        meta: {
+          title: t('router.ComputerSocietyHonor')
+        }
+      },
+      {
+        path: 'history',
+        name: 'ComputerSocietyHistory',
+        component: () => import('@/views/Info/Histroy.vue'),
+        meta: {
+          title: t('router.ComputerSocietyHistory')
+        }
+      }
+    ]
   },
   {
     path: '/redirect',
@@ -144,60 +188,6 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
         component: () => import('@/views/infos/Intro.vue'),
         meta: {
           title: t('router.menu3')
-        }
-      }
-    ]
-  },
-  {
-    // 这里重定向到/home
-    path: '/info',
-    component: Layout,
-    name: 'Info',
-    redirect: '/info/home.vue',
-    meta: {
-      title: t('router.ComputerSocietyInfo'),
-      icon: 'ic:baseline-library-books'
-    },
-    // 这里的路径为/info/
-    children: [
-      {
-        path: 'intro',
-        name: 'ComputerSocietyIntroduction',
-        component: () => import('@/views/Info/Intro.vue'),
-        meta: {
-          title: t('router.ComputerSocietyIntroduction')
-        }
-      },
-      {
-        path: 'organization',
-        name: 'ComputerSocietyOrganization',
-        component: () => import('@/views/Info/Organization.vue'),
-        meta: {
-          title: t('router.ComputerSocietyOrganization')
-        }
-      },
-      {
-        path: 'regulation',
-        name: 'ComputerSocietyRegulation',
-        component: () => import('@/views/Info/Regulation.vue'),
-        meta: {
-          title: t('router.ComputerSocietyRegulation')
-        }
-      },
-      {
-        path: 'honor',
-        name: 'ComputerSocietyHonor',
-        component: () => import('@/views/Info/Honor.vue'),
-        meta: {
-          title: t('router.ComputerSocietyHonor')
-        }
-      },
-      {
-        path: 'history',
-        name: 'ComputerSocietyHistory',
-        component: () => import('@/views/Info/Histroy.vue'),
-        meta: {
-          title: t('router.ComputerSocietyHistory')
         }
       }
     ]

@@ -17,7 +17,7 @@ const { start, done } = useNProgress()
 
 const { loadStart, loadDone } = usePageLoading()
 
-const whiteList = ['/login', '/mytest'] // 不重定向白名单
+const whiteList = ['/login', '/mytest', '/info', '/info/intro'] // 不重定向白名单
 
 router.beforeEach(async (to, from, next) => {
   console.log('看这里' + permissionStore.getIsAddRouters)
@@ -68,9 +68,10 @@ router.beforeEach(async (to, from, next) => {
     console.log('用户为登陆')
     // 若不存在用户信息，如果白名单允许放行
     if (whiteList.indexOf(to.path) !== -1) {
-      console.log(`白名单存在to.path${to.path}放行`)
+      console.log(`白名单存在${to.path}放行`)
       next()
     } else {
+      console.log(`白名单不存在${to.path}不放行`)
       // 不然重定向到login?redirect
       next(`/login?redirect=${to.path}`) // 否则全部重定向到登录页
     }
