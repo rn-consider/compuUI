@@ -527,6 +527,62 @@ const testList: string[] = [
   '/error/500-demo'
 ]
 
+// const testList = [
+//   {
+//     // 这里重定向到/home
+//     path: '/info',
+//     component: Layout,
+//     name: 'Info',
+//     redirect: '/info/intro',
+//     meta: {
+//       title: 'router.ComputerSocietyInfo',
+//       icon: 'ic:baseline-library-books'
+//     },
+//     // 这里的路径为/info/
+//     children: [
+//       {
+//         path: 'intro',
+//         name: 'ComputerSocietyIntroduction',
+//         component: () => import('@/views/Info/Intro.vue'),
+//         meta: {
+//           title: t('router.ComputerSocietyIntroduction')
+//         }
+//       },
+//       {
+//         path: 'organization',
+//         name: 'ComputerSocietyOrganization',
+//         component: () => import('@/views/Info/Organization.vue'),
+//         meta: {
+//           title: t('router.ComputerSocietyOrganization')
+//         }
+//       },
+//       {
+//         path: 'regulation',
+//         name: 'ComputerSocietyRegulation',
+//         component: () => import('@/views/Info/Regulation.vue'),
+//         meta: {
+//           title: t('router.ComputerSocietyRegulation')
+//         }
+//       },
+//       {
+//         path: 'honor',
+//         name: 'ComputerSocietyHonor',
+//         component: () => import('@/views/Info/Honor.vue'),
+//         meta: {
+//           title: t('router.ComputerSocietyHonor')
+//         }
+//       },
+//       {
+//         path: 'history',
+//         name: 'ComputerSocietyHistory',
+//         component: () => import('@/views/Info/Histroy.vue'),
+//         meta: {
+//           title: t('router.ComputerSocietyHistory')
+//         }
+//       }
+//     ]
+//   }
+// ]
 export default [
   // 列表接口
   {

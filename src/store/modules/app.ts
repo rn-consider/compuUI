@@ -49,6 +49,8 @@ export const useAppStore = defineStore('app', {
       breadcrumbIcon: true,
       // 折叠图标
       hamburger: true,
+
+      dynamicRouter: true,
       // 全屏图标
       screenfull: true,
       // 尺寸图标

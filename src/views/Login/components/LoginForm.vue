@@ -205,11 +205,20 @@ watch(
 
 // 登录
 const signIn = async () => {
+  console.log('在这里登陆方法被调用了')
+  // 生成无需权限的路由
   await permissionStore.generateRoutes('none').catch(() => {})
+  // 遍历 permissionStore 中的 getAddRouters，
+  // 这是已经生成的可访问路由列表。对于每个路由，
+  // 使用 addRoute 方法将其动态添加到路由表中
   permissionStore.getAddRouters.forEach((route) => {
+    // router.level类在这里被读取
+    console.log(route)
     addRoute(route as RouteRecordRaw) // 动态添加可访问路由表
   })
+  // 表示已经将路由动态添加到路由表中
   permissionStore.setIsAddRouters(true)
+  // 这里来重定向之前访问的页面
   push({ path: redirect.value || permissionStore.addRouters[0].path })
 
   const formRef = await getElFormExpose()
@@ -222,12 +231,18 @@ const signIn = async () => {
         const res = await loginApi(formData)
 
         if (res) {
+          console.log('完成了登陆' + res.data)
           setStorage(appStore.getUserInfo, res.data)
+
           // 是否使用动态路由
           if (appStore.getDynamicRouter) {
-            getRole()
+            console.log('登陆表单使用了动态路由')
+            getRole() // 如果启用了动态路由，获取用户角色信息
           } else {
+            // 如果未启用动态路由，使用静态路由
+            console.log('登陆表单使用了静态路由')
             await permissionStore.generateRoutes('none').catch(() => {})
+            // 核心是这里，注册了所写的路由表
             permissionStore.getAddRouters.forEach((route) => {
               addRoute(route as RouteRecordRaw) // 动态添加可访问路由表
             })

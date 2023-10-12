@@ -17,7 +17,7 @@ const { start, done } = useNProgress()
 
 const { loadStart, loadDone } = usePageLoading()
 
-const whiteList = ['/login', '/mytest', '/info', '/info/intro'] // 不重定向白名单
+const whiteList = ['/login'] // 不重定向白名单
 
 router.beforeEach(async (to, from, next) => {
   console.log('看这里' + permissionStore.getIsAddRouters)
@@ -46,11 +46,13 @@ router.beforeEach(async (to, from, next) => {
 
       // 是否使用动态路由
       if (appStore.getDynamicRouter) {
+        console.log('默认使用动态路由')
         // 使用动态路由的情况下，如果角色是admin,那么生成 'admin' 类型的动态路由，不是 'admin'，则生成 'test' 类型的动态路由
         userInfo.role === 'admin'
           ? await permissionStore.generateRoutes('admin', roleRouters as AppCustomRouteRecordRaw[])
           : await permissionStore.generateRoutes('test', roleRouters as string[])
       } else {
+        console.log('使用静态路由')
         // 不使用动态路由，则生成静态路由
         await permissionStore.generateRoutes('none')
       }
