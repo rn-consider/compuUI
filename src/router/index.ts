@@ -18,6 +18,16 @@ export const constantRouterMap: AppRouteRecordRaw[] = [
     }
   },
   {
+    path: '/mytest',
+    component: () => import('@/views/Public/home.vue'),
+    name: 'Mytest',
+    meta: {
+      hidden: true,
+      title: '测试权限',
+      noTagsView: true
+    }
+  },
+  {
     path: '/redirect',
     component: Layout,
     name: 'Redirect',
