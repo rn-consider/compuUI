@@ -1,20 +1,32 @@
 <script setup lang="ts">
-import { ElInput } from 'element-plus'
 import { ContentWrap } from '@/components/ContentWrap'
+import { Editor, EditorExpose } from '@/components/Editor'
 import { useI18n } from '@/hooks/web/useI18n'
-import { ref } from 'vue'
-
-defineOptions({
-  name: 'Menu2'
-})
+import { IDomEditor } from '@wangeditor/editor'
+import { ref, onMounted, unref } from 'vue'
 
 const { t } = useI18n()
 
-const text = ref('')
+const change = (editor: IDomEditor) => {
+  console.log(editor.getHtml())
+}
+
+const editorRef = ref<typeof Editor & EditorExpose>()
+
+const defaultHtml = ref('')
+
+onMounted(async () => {
+  const editor = await unref(editorRef)?.getEditorRef()
+  console.log(editor)
+})
+
+setTimeout(() => {
+  defaultHtml.value = '<p>hello <strong>world</strong></p>'
+}, 3000)
 </script>
 
 <template>
-  <ContentWrap :title="t('router.ComputerSocietyHonor')">
-    <div class="flex items-center"> Menu2: <ElInput v-model="text" class="pl-20px" /> </div>
+  <ContentWrap :title="t('richText.richText')" :message="t('richText.richTextDes')">
+    <Editor v-model="defaultHtml" ref="editorRef" @change="change" />
   </ContentWrap>
 </template>
