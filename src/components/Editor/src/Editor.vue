@@ -94,6 +94,7 @@ const editorStyle = computed(() => {
 // 回调函数
 const handleChange = (editor: IDomEditor) => {
   emit('change', editor)
+  console.log('每当内容改变我就会被调用')
 }
 
 // 组件销毁时，及时销毁编辑器
