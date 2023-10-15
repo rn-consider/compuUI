@@ -13,7 +13,6 @@ const adminList = [
     name: 'Admin',
     redirect: '/admin/introupdate',
     meta: {
-
       title: 'router.ComputerSocietyInfoUpdate',
       icon: 'ic:baseline-library-books'
     },
@@ -21,7 +20,7 @@ const adminList = [
       {
         path: 'introupdate',
         name: 'ComputerSocietyIntroductionUpdate',
-        component: 'views/Admin/IntroUpdate',
+        component: 'views/Admin/Info/IntroUpdate',
         meta: {
           title: 'router.ComputerSocietyIntroductionUpdate'
         }
@@ -29,7 +28,7 @@ const adminList = [
       {
         path: 'organizationupdate',
         name: 'ComputerSocietyOrganizationUpdate',
-        component: 'views/Admin/OrganizationUpdate',
+        component: 'views/Admin/Info/OrganizationUpdate',
         meta: {
           title: 'router.ComputerSocietyOrganizationUpdate'
         }
@@ -37,7 +36,7 @@ const adminList = [
       {
         path: 'regulationupdate',
         name: 'ComputerSocietyRegulationUpdate',
-        component: 'views/Admin/RegulationUpdate',
+        component: 'views/Admin/Info/RegulationUpdate',
         meta: {
           title: 'router.ComputerSocietyRegulationUpdate'
         }
@@ -45,7 +44,7 @@ const adminList = [
       {
         path: 'honorupdate',
         name: 'ComputerSocietyHonorUpdate',
-        component: 'views/Admin/HonorUpdate',
+        component: 'views/Admin/Info/HonorUpdate',
         meta: {
           title: 'router.ComputerSocietyHonorUpdate'
         }
@@ -53,7 +52,7 @@ const adminList = [
       {
         path: 'historyupdate',
         name: 'ComputerSocietyHistoryUpdate',
-        component: 'views/Admin/HistroyUpdate',
+        component: 'views/Admin/Info/HistroyUpdate',
         meta: {
           title: 'router.ComputerSocietyHistoryUpdate'
         }

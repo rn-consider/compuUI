@@ -81,7 +81,7 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
       {
         path: 'introupdate',
         name: 'ComputerSocietyIntroductionUpdate',
-        component: () => import('@/views/Admin/IntroUpdate.vue'),
+        component: () => import('@/views/Admin/Info/IntroUpdate.vue'),
         meta: {
           title: t('router.ComputerSocietyIntroductionUpdate')
         }
@@ -89,7 +89,7 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
       {
         path: 'organizationupdate',
         name: 'ComputerSocietyOrganizationUpdate',
-        component: () => import('@/views/Admin/OrganizationUpdate.vue'),
+        component: () => import('@/views/Admin/Info/OrganizationUpdate.vue'),
         meta: {
           title: t('router.ComputerSocietyOrganizationUpdate')
         }
@@ -97,7 +97,7 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
       {
         path: 'regulationupdate',
         name: 'ComputerSocietyRegulationUpdate',
-        component: () => import('@/views/Admin/RegulationUpdate.vue'),
+        component: () => import('@/views/Admin/Info/RegulationUpdate.vue'),
         meta: {
           title: t('router.ComputerSocietyRegulationUpdate')
         }
@@ -105,7 +105,7 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
       {
         path: 'honorupdate',
         name: 'ComputerSocietyHonorUpdate',
-        component: () => import('@/views/Admin/HonorUpdate.vue'),
+        component: () => import('@/views/Admin/Info/HonorUpdate.vue'),
         meta: {
           title: t('router.ComputerSocietyHonorUpdate')
         }
@@ -113,7 +113,7 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
       {
         path: 'historyupdate',
         name: 'ComputerSocietyHistoryUpdate',
-        component: () => import('@/views/Admin/HistroyUpdate.vue'),
+        component: () => import('@/views/Admin/Info/HistroyUpdate.vue'),
         meta: {
           title: t('router.ComputerSocietyHistoryUpdate')
         }
