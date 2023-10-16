@@ -29,7 +29,7 @@ const change = (editor: IDomEditor) => {
   const id = 5 // 学会荣誉的id
 
   // 在这里调用更新信息的函数
-  updateInfoApi(id, { title: '学会荣誉', content: updatedHtml })
+  updateInfoApi(id, { title: '组织机构', content: updatedHtml })
     .then((response) => {
       console.log('这是请求成功后', response) // 使用逗号而不是加号连接
       // 处理响应
@@ -62,7 +62,7 @@ setTimeout(() => {
 </script>
 
 <template>
-  <ContentWrap :title="t('richText.richText')" :message="t('richText.richTextDes')">
+  <ContentWrap title="组织机构">
     <Editor v-model="defaultHtml" ref="editorRef" @change="change" />
   </ContentWrap>
 </template>

@@ -26,10 +26,10 @@ const open4 = () => {
 const change = (editor: IDomEditor) => {
   const updatedHtml = editor.getHtml()
   // 假设 id 是你要更新的信息的标识
-  const id = 1 // 学会荣誉的id
+  const id = 1 // 学会简介的id
 
   // 在这里调用更新信息的函数
-  updateInfoApi(id, { title: '学会荣誉', content: updatedHtml })
+  updateInfoApi(id, { title: '学会简介', content: updatedHtml })
     .then((response) => {
       console.log('这是请求成功后', response) // 使用逗号而不是加号连接
       // 处理响应
@@ -62,7 +62,7 @@ setTimeout(() => {
 </script>
 
 <template>
-  <ContentWrap :title="t('richText.richText')" :message="t('richText.richTextDes')">
+  <ContentWrap title="学会简介">
     <Editor v-model="defaultHtml" ref="editorRef" @change="change" />
   </ContentWrap>
 </template>

@@ -62,7 +62,7 @@ setTimeout(() => {
 </script>
 
 <template>
-  <ContentWrap :title="t('richText.richText')" :message="t('richText.richTextDes')">
+  <ContentWrap title="学会简史">
     <Editor v-model="defaultHtml" ref="editorRef" @change="change" />
   </ContentWrap>
 </template>
