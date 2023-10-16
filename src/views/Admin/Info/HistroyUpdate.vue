@@ -57,7 +57,7 @@ onMounted(async () => {
 })
 
 setTimeout(() => {
-  defaultHtml.value = '<p>抱歉 <strong>信息加载超时</strong></p>'
+  open4()
 }, 60000)
 </script>
 
