@@ -28,15 +28,17 @@ const change = (editor: IDomEditor) => {
   // console.log(updatedHtml)
 
   // 假设 id 是你要更新的信息的标识
-  const id = 123 // 替换为实际的信息标识
+  const id = 2 // 学会简史的id
 
   // 在这里调用更新信息的函数
-  updateInfoApi(id, { title: 'Your Title', content: updatedHtml })
+  updateInfoApi(id, { title: '学会简史', content: updatedHtml })
     .then((response) => {
+      console.log('这是请求成功后', response) // 使用逗号而不是加号连接
       // 处理响应
       open1()
     })
     .catch((error) => {
+      console.log('请求失败' + error)
       // 处理错误
       open4()
     })
