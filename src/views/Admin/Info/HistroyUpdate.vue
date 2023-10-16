@@ -4,7 +4,7 @@ import { Editor, EditorExpose } from '@/components/Editor'
 import { useI18n } from '@/hooks/web/useI18n'
 import { IDomEditor } from '@wangeditor/editor'
 import { ref, onMounted, unref } from 'vue'
-import { updateInfoApi } from '@/api/info/index' // 导入更新信息的函数
+import { getInfoApi, updateInfoApi } from '@/api/info/index' // 导入更新信息的函数
 import { ElNotification } from 'element-plus'
 
 const { t } = useI18n()
@@ -25,8 +25,6 @@ const open4 = () => {
 }
 const change = (editor: IDomEditor) => {
   const updatedHtml = editor.getHtml()
-  // console.log(updatedHtml)
-
   // 假设 id 是你要更新的信息的标识
   const id = 2 // 学会简史的id
 
@@ -47,15 +45,20 @@ const change = (editor: IDomEditor) => {
 const editorRef = ref<typeof Editor & EditorExpose>()
 
 const defaultHtml = ref('')
-
 onMounted(async () => {
   const editor = await unref(editorRef)?.getEditorRef()
-  console.log(editor)
+  try {
+    const response = await getInfoApi(2)
+    defaultHtml.value = response.info.content // 假设响应包含"content"字段
+    console.log(editor)
+  } catch (error) {
+    console.error('获取信息失败:', error)
+  }
 })
 
 setTimeout(() => {
-  defaultHtml.value = '<p>hello <strong>world</strong></p>'
-}, 3000)
+  defaultHtml.value = '<p>抱歉 <strong>信息加载超时</strong></p>'
+}, 60000)
 </script>
 
 <template>

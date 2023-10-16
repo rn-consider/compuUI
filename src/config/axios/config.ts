@@ -81,7 +81,12 @@ const defaultResponseInterceptors = (response: AxiosResponse<any>) => {
     // 如果是文件流，直接过
     return response
   } else if ((response.data && response.data.code === config.code) || response.code === 200) {
-    return response.data
+    console.log('这里如果response.data不存在直接返回response', response)
+    // 这里如果response.data不存在直接返回response
+    if (response.data) {
+      return response.data
+    }
+    return response
   } else {
     ElMessage.error(response.data ? response.data.message : '未知错误')
   }
