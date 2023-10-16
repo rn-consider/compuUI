@@ -100,7 +100,7 @@ export default {
   },
   login: {
     welcome: 'Welcome to the system',
-    message: 'Backstage management system',
+    message: 'type admin/admin to see the detail',
     username: 'Username',
     password: 'Password',
     register: 'Register',

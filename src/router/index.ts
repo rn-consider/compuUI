@@ -53,16 +53,6 @@ export const constantRouterMap: AppRouteRecordRaw[] = [
       title: '404',
       noTagsView: true
     }
-  },
-  {
-    path: '/my',
-    name: 'My',
-    meta: {
-      hidden: true,
-      title: 'my',
-      noTagsView: true
-    },
-    component: () => import('@/views/infos/Intro.vue')
   }
 ]
 

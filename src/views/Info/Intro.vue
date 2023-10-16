@@ -1,20 +1,25 @@
 <script setup lang="ts">
-import { ElInput } from 'element-plus'
 import { ContentWrap } from '@/components/ContentWrap'
 import { useI18n } from '@/hooks/web/useI18n'
-import { ref } from 'vue'
-
-defineOptions({
-  name: 'Menu111'
-})
+import { onMounted, ref } from 'vue'
+import { getInfoApi } from '@/api/info'
 
 const { t } = useI18n()
 
-const text = ref('')
+const content = ref('')
+
+onMounted(async () => {
+  try {
+    const response = await getInfoApi(1)
+    content.value = response.info.content
+  } catch (error) {
+    console.error('获取信息失败:', error)
+  }
+})
 </script>
 
 <template>
   <ContentWrap :title="t('router.ComputerSocietyIntroduction')">
-    <div class="flex items-center"> Menu111: <ElInput v-model="text" class="pl-20px" /> </div>
+    <div v-html="content"></div>
   </ContentWrap>
 </template>
