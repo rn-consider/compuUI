@@ -31,16 +31,19 @@ server {
         root   /usr/share/nginx/html;
     }
 }
+
 ```
 
+
+
 1. ```
-  git clone https://github.com/rn-consider/compuUI.git
-  ```
-  
+   git clone https://github.com/rn-consider/compuUI.git
+   ```
 2. ```
-  cd compuUI
-  ```
-  
+   cd compuUI
+   ```
 3. ```
-  docker-compose up -d
-  ```
+   docker-compose up -d
+   ```
+
+
