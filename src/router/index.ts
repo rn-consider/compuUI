@@ -174,7 +174,7 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
       {
         path: 'menu3',
         name: 'Menu3',
-        component: () => import('@/views/infos/Intro.vue'),
+        component: () => import('@/views/Info/Intro.vue'),
         meta: {
           title: t('router.menu3')
         }
