@@ -11,7 +11,7 @@ VITE_BASE_PATH=/
 VITE_DROP_DEBUGGER=true
 
 # 是否删除console.log
-VITE_DROP_CONSOLE=true
+VITE_DROP_CONSOLE=false
 
 # 是否sourcemap
 VITE_SOURCEMAP=false
