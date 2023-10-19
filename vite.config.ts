@@ -51,7 +51,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       }),
       EslintPlugin({
         cache: false,
-        // include: ['src/**/*.vue', 'src/**/*.ts', 'src/**/*.tsx'] // 检查的文件
+        include: ['src/**/*.vue', 'src/**/*.ts', 'src/**/*.tsx'] // 检查的文件
       }),
       VueI18nPlugin({
         runtimeOnly: true,
@@ -120,7 +120,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       port: 4000,
       proxy: {     
         '/api': {
-          target: 'http://127.0.0.1:8010',
+          target: 'http://0.0.0.0:8010',
           changeOrigin: true,
           rewrite: path => path.replace(/^\/api/, '')
         }
