@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  compuui:
+    container_name: compuui
+    build: .
+    restart: no
+    network_mode: "host"
