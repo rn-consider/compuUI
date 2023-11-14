@@ -18,6 +18,14 @@ const adminList = [
     },
     children: [
       {
+        path: 'students',
+        name: 'Students',
+        component: 'views/Admin/Student/AllStudent',
+        meta: {
+          title: '学生列表'
+        }
+      },
+      {
         path: 'introupdate',
         name: 'ComputerSocietyIntroductionUpdate',
         component: 'views/Admin/Info/IntroUpdate',

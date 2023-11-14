@@ -69,6 +69,14 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
     },
     children: [
       {
+        path: 'students',
+        name: 'Students',
+        component: () => import('@/views/Admin/Student/AllStud.vue'),
+        meta: {
+          title: '学生列表'
+        }
+      },
+      {
         path: 'introupdate',
         name: 'ComputerSocietyIntroductionUpdate',
         component: () => import('@/views/Admin/Info/IntroUpdate.vue'),
