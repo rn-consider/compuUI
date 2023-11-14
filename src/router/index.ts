@@ -62,12 +62,20 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
     path: '/admin',
     component: Layout,
     name: 'Admin',
-    redirect: '/admin/introupdate',
+    redirect: '/admin/studentlist',
     meta: {
       title: t('router.ComputerSocietyInfoUpdate'),
       icon: 'ic:baseline-library-books'
     },
     children: [
+      {
+        path: 'studentlist',
+        name: 'StudentList',
+        component: () => import('@/views/Admin/Info/IntroUpdate.vue'),
+        meta: {
+          title: '学生列表'
+        }
+      },
       {
         path: 'introupdate',
         name: 'ComputerSocietyIntroductionUpdate',

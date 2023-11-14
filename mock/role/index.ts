@@ -11,12 +11,20 @@ const adminList = [
     path: '/admin',
     component: '#',
     name: 'Admin',
-    redirect: '/admin/introupdate',
+    redirect: '/admin/studentlist',
     meta: {
-      title: 'router.ComputerSocietyInfoUpdate',
+      title: '学生列表',
       icon: 'ic:baseline-library-books'
     },
     children: [
+      {
+        path: 'test',
+        name: 'StudentList',
+        component: 'views/Admin/Info/IntroUpdate',
+        meta: {
+          title: '学生列表'
+        }
+      },
       {
         path: 'introupdate',
         name: 'ComputerSocietyIntroductionUpdate',
@@ -47,14 +55,6 @@ const adminList = [
         component: 'views/Admin/Info/HonorUpdate',
         meta: {
           title: 'router.ComputerSocietyHonorUpdate'
-        }
-      },
-      {
-        path: 'historyupdate',
-        name: 'ComputerSocietyHistoryUpdate',
-        component: 'views/Admin/Info/HistroyUpdate',
-        meta: {
-          title: 'router.ComputerSocietyHistoryUpdate'
         }
       }
     ]
